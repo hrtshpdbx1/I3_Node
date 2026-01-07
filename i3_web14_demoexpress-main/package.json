@@ -1,0 +1,24 @@
+{
+  "name": "demo_express",
+  "version": "1.0.0",
+  "description": "demo Express pour les Web14 d'I3",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --env-file=.env app.js",
+    "dev" : "node --watch --env-file=.env app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/audebstorm/i3_web14_demoexpress.git"
+  },
+  "author": "Aude",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/audebstorm/i3_web14_demoexpress/issues"
+  },
+  "homepage": "https://gitlab.com/audebstorm/i3_web14_demoexpress#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

@@ -1,0 +1,371 @@
+type: spec.insomnia.rest/5.0
+schema_version: "5.1"
+name: Demo_Express
+meta:
+  id: wrk_a93c9fbaeccd4a04a4fdbba307f12796
+  created: 1767695836059
+  modified: 1767695836059
+  description: ""
+collection:
+  - name: Tasks
+    meta:
+      id: fld_6621359dabeb436d8cdbcbde1a92666d
+      created: 1767696257411
+      modified: 1767696257411
+      sortKey: -1767696257411
+      description: ""
+    children:
+      - url: http://localhost:3000/api/tasks/
+        name: GetAll
+        meta:
+          id: req_95a73b0e054e49bb888f5a9d68ad62f9
+          created: 1767696304735
+          modified: 1767702542573
+          isPrivate: false
+          description: ""
+          sortKey: -1767696304735
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/tasks/1
+        name: GetById
+        meta:
+          id: req_182cd05ba5d347e1a212b12cb8fbb34f
+          created: 1767696854725
+          modified: 1767702567426
+          isPrivate: false
+          description: ""
+          sortKey: -1767696304635
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/tasks/
+        name: Insert
+        meta:
+          id: req_c6217032b4df4b8ebdb31ec97b297d84
+          created: 1767702190406
+          modified: 1767703828307
+          isPrivate: false
+          description: ""
+          sortKey: -1767696304535
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name" : "Nettoyer la litière de Soup",
+            	"category" : "Maison",
+            	"by" : "Aude",
+            	"for" : "Aude",
+            	"isDone" : false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/tasks/1
+        name: Update
+        meta:
+          id: req_ac7b7779de5b4b26a6b851fa62be3f9c
+          created: 1767704170631
+          modified: 1767776059430
+          isPrivate: false
+          description: ""
+          sortKey: -1767696304435
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name" : "Nettoyer la litière de Soup",
+            	"category" : "Maison",
+            	"by" : "Aude",
+            	"for" : "JeanLuc",
+            	"isDone" : false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/tasks/1
+        name: Delete
+        meta:
+          id: req_4218b8d339e74c8fa7656e4e48d4b6f5
+          created: 1767705133720
+          modified: 1767705232924
+          isPrivate: false
+          description: ""
+          sortKey: -1767696304335
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/tasks/user/Aude
+        name: GetByUser
+        meta:
+          id: req_ab2fd0934fbe4fa79757a39fd97c4cad
+          created: 1767775547199
+          modified: 1767775923376
+          isPrivate: false
+          description: ""
+          sortKey: -1767696304585
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/tasks/1
+        name: UpdateStatus
+        meta:
+          id: req_ffca773098b74d908aa78e5a43d784be
+          created: 1767776077805
+          modified: 1767776195667
+          isPrivate: false
+          description: ""
+          sortKey: -1767696304385
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"isDone" : true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categories
+    meta:
+      id: fld_b1d7cdfb79084e01bef565803d292ae6
+      created: 1767774689380
+      modified: 1767774689380
+      sortKey: -1767774689380
+      description: ""
+    children:
+      - url: http://localhost:3000/api/categories
+        name: GetAll
+        meta:
+          id: req_112fc77f470f4a81be06f238248de3d8
+          created: 1767774693288
+          modified: 1767774799581
+          isPrivate: false
+          description: ""
+          sortKey: -1767774737539
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/categories/1
+        name: GetById
+        meta:
+          id: req_f399154ba43442d586f79031677f1633
+          created: 1767774705673
+          modified: 1767774883580
+          isPrivate: false
+          description: ""
+          sortKey: -1767774737489
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/categories
+        name: Insert
+        meta:
+          id: req_6c2ebd2e22b2436a9eb095511f891154
+          created: 1767774714965
+          modified: 1767775009695
+          isPrivate: false
+          description: ""
+          sortKey: -1767774737464
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name" : "Bricolage",
+            	"icon" : "🛠️"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/categories/1
+        name: Update
+        meta:
+          id: req_a53b433bdfaf45f486298a66ac6ee46e
+          created: 1767774726405
+          modified: 1767775084125
+          isPrivate: false
+          description: ""
+          sortKey: -1767774737451.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name" : "Bricolage",
+            	"icon" : "🔧"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/categories/1
+        name: Delete
+        meta:
+          id: req_f08cf5b9dd51451695d14eb37328a1f7
+          created: 1767774737439
+          modified: 1767775115839
+          isPrivate: false
+          description: ""
+          sortKey: -1767774737439
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.2.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6fc8a2fc7836b5aa2e4cb8327ae28bd89e0830fb
+    created: 1767695836069
+    modified: 1767695836069
+environments:
+  name: Base Environment
+  meta:
+    id: env_6fc8a2fc7836b5aa2e4cb8327ae28bd89e0830fb
+    created: 1767695836066
+    modified: 1767695836066
+    isPrivate: false
+spec:
+  meta:
+    id: spc_7044f5620ada4c1e8a020a412c7544e7
+    created: 1767695836063
+    modified: 1767774343903
